@@ -45,11 +45,25 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-image-wrap">
-          <img
-            class="hero-image"
-            src="assets/unicornio-cover.png"
-            alt="Yanina Muzyka and Emmanuel Casal dancing tango in a Riga street with unicorn details"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                assets/unicornio-cover-640.webp 640w,
+                assets/unicornio-cover-1280.webp 1280w,
+                assets/unicornio-cover-1733.webp 1733w
+              "
+              sizes="100vw"
+            />
+            <img
+              class="hero-image"
+              src="assets/unicornio-cover.png"
+              width="1733"
+              height="907"
+              fetchpriority="high"
+              alt="Yanina Muzyka and Emmanuel Casal dancing tango in a Riga street with unicorn details"
+            />
+          </picture>
           <div class="hero-image-shade" aria-hidden="true"></div>
         </div>
 
