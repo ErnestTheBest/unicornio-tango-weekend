@@ -106,17 +106,10 @@ button,
 }
 
 .brand-mark {
-  display: grid;
+  display: block;
   width: 34px;
   height: 34px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--rose), var(--gold), var(--cyan), var(--violet));
-  color: var(--ink);
-  font-family: var(--display);
-  font-size: 1.2rem;
-  font-weight: 900;
+  object-fit: contain;
 }
 
 .main-nav {

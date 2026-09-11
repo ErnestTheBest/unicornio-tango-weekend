@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Unicornio</title>
+  <defs>
+    <linearGradient id="unicornio-gradient" x1="12" y1="10" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff8a74" />
+      <stop offset="0.42" stop-color="#f5c05b" />
+      <stop offset="0.74" stop-color="#91e69a" />
+      <stop offset="1" stop-color="#78d9ee" />
+    </linearGradient>
+  </defs>
+  <path d="M28 14C17 18 12 29 17 41c3 8-2 14-7 20h24c2-8 0-16-5-23-5-8-5-16 3-22Z" fill="url(#unicornio-gradient)" stroke="#17100d" stroke-linejoin="round" stroke-width="2.5" />
+  <path d="m31 18-1-14c0-2 2-2 3 0l7 14Z" fill="#fff5e5" stroke="#17100d" stroke-linejoin="round" stroke-width="2.5" />
+  <path d="m40 21 14-18-8 23Z" fill="url(#unicornio-gradient)" stroke="#17100d" stroke-linejoin="round" stroke-width="2.5" />
+  <path d="M29 14c8-1 14 5 15 13 1 4 5 7 12 10 5 2 5 7 1 10l-9 4c-5 2-7 5-8 10H22c3-9 2-15-3-22-5-8-1-20 10-25Z" fill="#fff5e5" stroke="#17100d" stroke-linejoin="round" stroke-width="2.5" />
+  <circle cx="40" cy="31" r="2.2" fill="#17100d" />
+  <path d="M52 42h4" fill="none" stroke="#17100d" stroke-linecap="round" stroke-width="2" />
+</svg>
