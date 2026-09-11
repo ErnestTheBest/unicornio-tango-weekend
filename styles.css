@@ -291,6 +291,7 @@ button,
 .hero-facts div {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 11px;
 }
 
