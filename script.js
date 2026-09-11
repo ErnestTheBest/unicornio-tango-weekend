@@ -113,7 +113,7 @@ const translations = {
     registrationEyebrow: "Сохраните своё место",
     registrationTitle: "Регистрация",
     registrationCardTitle: "Занятия и милонги",
-    registrationCardText: "Зарегистрируйтесь через Google Forms или свяжитесь с организатором через событие в Facebook.",
+    registrationCardText: "Зарегистрируйтесь через Google Forms или свяжитесь с организатором через Facebook.",
     registrationFormButton: "Открыть Google Forms",
     registrationOr: "или",
     openEvent: "Открыть событие в Facebook",
