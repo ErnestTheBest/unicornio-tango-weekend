@@ -53,7 +53,7 @@ const translations = {
         date: "23. oktobris",
         items: [
           { time: "19:00 - 20:15", type: "1. nodarbība", title: "Kontakts un komunikācija pagriezienos un očo", text: "Tehnika, vadīšana un projekcijas dažādos virzienos. Kustību kvalitāte un intensitāte." },
-          { time: "20:40", type: "Milonga", title: "Atklāšanas milonga ar TDJ Juampi", text: "ARG / SWE · līdz 00:30+", milonga: true },
+          { time: "20:40 - 00:30+", type: "Milonga", title: "Atklāšanas milonga ar TDJ Juampi", text: "ARG / SWE", milonga: true },
         ],
       },
       {
@@ -62,7 +62,7 @@ const translations = {
         items: [
           { time: "14:00 - 15:15", type: "2. nodarbība", title: "Neparastās parādas", text: "Arī ar gančo kā rotājumu." },
           { time: "15:30 - 16:45", type: "3. nodarbība", title: "Valsis", text: "Dinamiski un ar kolgādām cilpā." },
-          { time: "20:00", type: "Grand Milonga", title: "Milonga ar Yanina & Emmanuel šovu", text: "TDJ Mariko · UKR / ISR · līdz 01:00", milonga: true },
+          { time: "20:00 - 01:00", type: "Grand Milonga", title: "Milonga ar Yanina & Emmanuel šovu", text: "TDJ Mariko · UKR / ISR", milonga: true },
         ],
       },
       {
@@ -138,7 +138,7 @@ const translations = {
         date: "23 октября",
         items: [
           { time: "19:00 - 20:15", type: "Занятие 1", title: "Контакт и коммуникация в очо и поворотах", text: "Техника, ведение и проекции в разных направлениях. Качество и интенсивность движения." },
-          { time: "20:40", type: "Милонга", title: "Милонга открытия с TDJ Juampi", text: "ARG / SWE · до 00:30+", milonga: true },
+          { time: "20:40 - 00:30+", type: "Милонга", title: "Милонга открытия с TDJ Juampi", text: "ARG / SWE", milonga: true },
         ],
       },
       {
@@ -147,7 +147,7 @@ const translations = {
         items: [
           { time: "14:00 - 15:15", type: "Занятие 2", title: "Нестандартные парады", text: "В том числе с ганчо в качестве украшений." },
           { time: "15:30 - 16:45", type: "Занятие 3", title: "Вальс", text: "С движем и с зацикленными кольгадами." },
-          { time: "20:00", type: "Grand Milonga", title: "Милонга с шоу Yanina & Emmanuel", text: "TDJ Mariko · УКР / ИЗР · до 01:00", milonga: true },
+          { time: "20:00 - 01:00", type: "Grand Milonga", title: "Милонга с шоу Yanina & Emmanuel", text: "TDJ Mariko · УКР / ИЗР", milonga: true },
         ],
       },
       {
@@ -223,7 +223,7 @@ const translations = {
         date: "October 23",
         items: [
           { time: "19:00 - 20:15", type: "Workshop 1", title: "Connection and communication in ochos and pivots", text: "Technique, lead and projections in different directions. Movement qualities and intensity." },
-          { time: "20:40", type: "Milonga", title: "Opening milonga with TDJ Juampi", text: "ARG / SWE · until 00:30+", milonga: true },
+          { time: "20:40 - 00:30+", type: "Milonga", title: "Opening milonga with TDJ Juampi", text: "ARG / SWE", milonga: true },
         ],
       },
       {
@@ -232,7 +232,7 @@ const translations = {
         items: [
           { time: "14:00 - 15:15", type: "Workshop 2", title: "Unconventional paradas", text: "Including ganchos as ornaments." },
           { time: "15:30 - 16:45", type: "Workshop 3", title: "Vals", text: "In motion, with colgadas in chain." },
-          { time: "20:00", type: "Grand Milonga", title: "Milonga with Yanina & Emmanuel show", text: "TDJ Mariko · UKR / ISR · until 01:00", milonga: true },
+          { time: "20:00 - 01:00", type: "Grand Milonga", title: "Milonga with Yanina & Emmanuel show", text: "TDJ Mariko · UKR / ISR", milonga: true },
         ],
       },
       {
