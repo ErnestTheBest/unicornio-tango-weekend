@@ -1,5 +1,4 @@
-// Add the Google Forms URL here when registration opens.
-const MILONGA_FORM_URL = "";
+const REGISTRATION_FORM_URL = "https://forms.gle/D3oBQXFUAZPL2CEC7";
 
 const translations = {
   lv: {
@@ -22,7 +21,6 @@ const translations = {
     introP2: "Gaidāmi oriģināli vingrinājumi, kas palīdz ķermenim darboties dabiski, uzlabo dialogu pārī un ļauj sarežģītām kustībām kļūt vieglākām un ērtākām.",
     programEyebrow: "Trīs dienas Rīgā",
     programTitle: "Programma",
-    programIntro: "Sešas nodarbības, divas milongas, viens šovs — un vēl daži pārsteigumi.",
     pricesEyebrow: "Nodarbību biļetes",
     pricesTitle: "Nodarbību cenas",
     pricesNotice: "Milongas tiek apmaksātas atsevišķi.",
@@ -35,16 +33,11 @@ const translations = {
     videoVals: "Skatīties viņu valsi",
     registrationEyebrow: "Rezervē savu vietu",
     registrationTitle: "Reģistrācija",
-    registrationIntro: "Nodarbībām un milongām ir atsevišķa reģistrācija un apmaksa.",
-    classesRegTitle: "Nodarbības",
-    classesRegText: "Lai reģistrētos nodarbībām, raksti organizatorei personīgu ziņu.",
+    registrationCardTitle: "Nodarbības un milongas",
+    registrationCardText: "Reģistrējies Google veidlapā vai sazinies ar organizatori Facebook pasākumā.",
+    registrationFormButton: "Atvērt Google veidlapu",
+    registrationOr: "vai",
     openEvent: "Atvērt Facebook pasākumu",
-    milongaRegTitle: "Sestdienas Grand Milonga",
-    milongaRegText: "Reģistrācija Google Forms tiks atvērta drīzumā.",
-    milongaRegButton: "Reģistrācija drīzumā",
-    organizerEyebrow: "Jūsu saimniece Rīgā",
-    organizerTitle: "Organizatore",
-    organizerText: "Jautājumi un reģistrācija nodarbībām — personīgā ziņā.",
     backToTop: "Uz augšu ↑",
     fullPass: "Pilna nodarbību biļete",
     singleClass: "Viena nodarbība",
@@ -53,7 +46,7 @@ const translations = {
         day: "Piektdiena",
         date: "23. oktobris",
         items: [
-          { time: "19:00", type: "1. nodarbība", title: "Kontakts un komunikācija pagriezienos un očo", text: "Tehnika, vadīšana un projekcijas dažādos virzienos. Kustību kvalitāte un intensitāte." },
+          { time: "19:00 - 20:15", type: "1. nodarbība", title: "Kontakts un komunikācija pagriezienos un očo", text: "Tehnika, vadīšana un projekcijas dažādos virzienos. Kustību kvalitāte un intensitāte." },
           { time: "20:40", type: "Milonga", title: "Atklāšanas milonga ar TDJ Juampi", text: "ARG / SWE · līdz 00:30+", milonga: true },
         ],
       },
@@ -61,8 +54,8 @@ const translations = {
         day: "Sestdiena",
         date: "24. oktobris",
         items: [
-          { time: "14:00", type: "2. nodarbība", title: "Neparastās parādas", text: "Arī ar gančo kā rotājumu." },
-          { time: "15:30", type: "3. nodarbība", title: "Valsis", text: "Dinamiski un ar kolgādām cilpā." },
+          { time: "14:00 - 15:15", type: "2. nodarbība", title: "Neparastās parādas", text: "Arī ar gančo kā rotājumu." },
+          { time: "15:30 - 16:45", type: "3. nodarbība", title: "Valsis", text: "Dinamiski un ar kolgādām cilpā." },
           { time: "20:00", type: "Grand Milonga", title: "Milonga ar Yanina & Emmanuel šovu", text: "TDJ Mariko · UKR / ISR · līdz 01:00", milonga: true },
         ],
       },
@@ -70,15 +63,14 @@ const translations = {
         day: "Svētdiena",
         date: "25. oktobris",
         items: [
-          { time: "13:00", type: "4. nodarbība", title: "Enroskes un aizmugurējās sakādas", text: "Aizmugurējo sakādu tehnika abām lomām. Ar pārsteigumiem." },
-          { time: "14:30", type: "5. nodarbība", title: "Volkādu tehnika", text: "Lineāras un apļveida volkādas ar rotājumiem." },
+          { time: "13:00 - 14:15", type: "4. nodarbība", title: "Enroskes un aizmugurējās sakādas", text: "Aizmugurējo sakādu tehnika abām lomām. Ar pārsteigumiem." },
+          { time: "14:30 - 15:45", type: "5. nodarbība", title: "Volkādu tehnika", text: "Lineāras un apļveida volkādas ar rotājumiem." },
           { time: "15:45", type: "Pārtraukums", title: "Pusdienu pārtraukums", text: "30 minūtes spēku atjaunošanai." },
-          { time: "16:15", type: "6. nodarbība", title: "Mulinete, enroskes un gančo", text: "Spēks un dinamika jaunā līmenī." },
+          { time: "16:15 - 17:30", type: "6. nodarbība", title: "Mulinete, enroskes un gančo", text: "Spēks un dinamika jaunā līmenī." },
         ],
       },
     ],
     pricing: [
-      { period: "Līdz 31. augustam", text: "Agrajiem putniņiem, kuri visu plāno ļoti laicīgi.", full: "160 €", single: "30 €" },
       { period: "Līdz 30. septembrim", text: "Tiem, kuri savus plānus zina nedaudz tuvāk pasākumam.", full: "190 €", single: "35 €" },
       { period: "No 1. oktobra", text: "Spontānajiem pēdējā brīža putniņiem — ja vēl ir vietas.", full: "220 €", single: "40 €" },
     ],
@@ -108,7 +100,6 @@ const translations = {
     introP2: "Вас ждут авторские упражнения, которые помогают телу работать естественно, улучшают диалог в паре и делают сложные движения легче и комфортнее.",
     programEyebrow: "Три дня в Риге",
     programTitle: "Программа",
-    programIntro: "Шесть занятий, две милонги, одно шоу — и ещё несколько сюрпризов.",
     pricesEyebrow: "Абонементы на занятия",
     pricesTitle: "Цены на уроки",
     pricesNotice: "Милонги оплачиваются отдельно.",
@@ -121,16 +112,11 @@ const translations = {
     videoVals: "Смотреть их вальс",
     registrationEyebrow: "Сохраните своё место",
     registrationTitle: "Регистрация",
-    registrationIntro: "Для занятий и милонг действуют отдельные регистрация и оплата.",
-    classesRegTitle: "Занятия",
-    classesRegText: "Чтобы зарегистрироваться на занятия, напишите организатору личное сообщение.",
+    registrationCardTitle: "Занятия и милонги",
+    registrationCardText: "Зарегистрируйтесь через Google Forms или свяжитесь с организатором через событие в Facebook.",
+    registrationFormButton: "Открыть Google Forms",
+    registrationOr: "или",
     openEvent: "Открыть событие в Facebook",
-    milongaRegTitle: "Субботняя Grand Milonga",
-    milongaRegText: "Регистрация через Google Forms откроется в ближайшее время.",
-    milongaRegButton: "Регистрация скоро откроется",
-    organizerEyebrow: "Ваша хозяйка в Риге",
-    organizerTitle: "Организатор",
-    organizerText: "Вопросы и регистрация на занятия — в личном сообщении.",
     backToTop: "Наверх ↑",
     fullPass: "Фулл-пасс на занятия",
     singleClass: "Одно занятие",
@@ -139,7 +125,7 @@ const translations = {
         day: "Пятница",
         date: "23 октября",
         items: [
-          { time: "19:00", type: "Занятие 1", title: "Контакт и коммуникация в очо и поворотах", text: "Техника, ведение и проекции в разных направлениях. Качество и интенсивность движения." },
+          { time: "19:00 - 20:15", type: "Занятие 1", title: "Контакт и коммуникация в очо и поворотах", text: "Техника, ведение и проекции в разных направлениях. Качество и интенсивность движения." },
           { time: "20:40", type: "Милонга", title: "Милонга открытия с TDJ Juampi", text: "ARG / SWE · до 00:30+", milonga: true },
         ],
       },
@@ -147,8 +133,8 @@ const translations = {
         day: "Суббота",
         date: "24 октября",
         items: [
-          { time: "14:00", type: "Занятие 2", title: "Нестандартные парады", text: "В том числе с ганчо в качестве украшений." },
-          { time: "15:30", type: "Занятие 3", title: "Вальс", text: "С движем и с зацикленными кольгадами." },
+          { time: "14:00 - 15:15", type: "Занятие 2", title: "Нестандартные парады", text: "В том числе с ганчо в качестве украшений." },
+          { time: "15:30 - 16:45", type: "Занятие 3", title: "Вальс", text: "С движем и с зацикленными кольгадами." },
           { time: "20:00", type: "Grand Milonga", title: "Милонга с шоу Yanina & Emmanuel", text: "TDJ Mariko · УКР / ИЗР · до 01:00", milonga: true },
         ],
       },
@@ -156,15 +142,14 @@ const translations = {
         day: "Воскресенье",
         date: "25 октября",
         items: [
-          { time: "13:00", type: "Занятие 4", title: "Энроскес и задние сакады", text: "Техника задних сакад для обеих ролей. С сюрпризами." },
-          { time: "14:30", type: "Занятие 5", title: "Техника волькад", text: "Линейные и круговые волькады с украшениями." },
+          { time: "13:00 - 14:15", type: "Занятие 4", title: "Энроскес и задние сакады", text: "Техника задних сакад для обеих ролей. С сюрпризами." },
+          { time: "14:30 - 15:45", type: "Занятие 5", title: "Техника волькад", text: "Линейные и круговые волькады с украшениями." },
           { time: "15:45", type: "Перерыв", title: "Перерыв на обед", text: "30 минут, чтобы набраться сил." },
-          { time: "16:15", type: "Занятие 6", title: "Мулинет, энроскес и ганчо", text: "Выводим силу и динамику на новый уровень." },
+          { time: "16:15 - 17:30", type: "Занятие 6", title: "Мулинет, энроскес и ганчо", text: "Выводим силу и динамику на новый уровень." },
         ],
       },
     ],
     pricing: [
-      { period: "До 31 августа", text: "Для ранних пташек, которые планируют всё заранее.", full: "160 €", single: "30 €" },
       { period: "До 30 сентября", text: "Для тех, кто уверен в своих планах чуть ближе к датам.", full: "190 €", single: "35 €" },
       { period: "С 1 октября", text: "Для спонтанных пташек последней минуты — если останутся места.", full: "220 €", single: "40 €" },
     ],
@@ -194,7 +179,6 @@ const translations = {
     introP2: "Expect original exercises that help the body work naturally, improve the dialogue inside the couple and make challenging movements feel lighter and more comfortable.",
     programEyebrow: "Three days in Riga",
     programTitle: "Program",
-    programIntro: "Six workshops, two milongas, one show — and a few surprises.",
     pricesEyebrow: "Workshop passes",
     pricesTitle: "Class prices",
     pricesNotice: "Milongas are paid separately.",
@@ -207,16 +191,11 @@ const translations = {
     videoVals: "Watch their vals",
     registrationEyebrow: "Save your place",
     registrationTitle: "Registration",
-    registrationIntro: "Workshops and milongas have separate registration and payment.",
-    classesRegTitle: "Workshops",
-    classesRegText: "To register for classes, send a personal message to the organizer.",
+    registrationCardTitle: "Workshops & milongas",
+    registrationCardText: "Register through the Google Form or contact the organizer through the Facebook event.",
+    registrationFormButton: "Open Google Form",
+    registrationOr: "or",
     openEvent: "Open Facebook event",
-    milongaRegTitle: "Saturday Grand Milonga",
-    milongaRegText: "Registration via Google Forms will open soon.",
-    milongaRegButton: "Registration opens soon",
-    organizerEyebrow: "Your host in Riga",
-    organizerTitle: "Organizer",
-    organizerText: "Questions and workshop registration — via a personal message.",
     backToTop: "Back to top ↑",
     fullPass: "Classes full pass",
     singleClass: "Single class",
@@ -225,7 +204,7 @@ const translations = {
         day: "Friday",
         date: "October 23",
         items: [
-          { time: "19:00", type: "Workshop 1", title: "Connection and communication in ochos and pivots", text: "Technique, lead and projections in different directions. Movement qualities and intensity." },
+          { time: "19:00 - 20:15", type: "Workshop 1", title: "Connection and communication in ochos and pivots", text: "Technique, lead and projections in different directions. Movement qualities and intensity." },
           { time: "20:40", type: "Milonga", title: "Opening milonga with TDJ Juampi", text: "ARG / SWE · until 00:30+", milonga: true },
         ],
       },
@@ -233,8 +212,8 @@ const translations = {
         day: "Saturday",
         date: "October 24",
         items: [
-          { time: "14:00", type: "Workshop 2", title: "Unconventional paradas", text: "Including ganchos as ornaments." },
-          { time: "15:30", type: "Workshop 3", title: "Vals", text: "In motion, with colgadas in chain." },
+          { time: "14:00 - 15:15", type: "Workshop 2", title: "Unconventional paradas", text: "Including ganchos as ornaments." },
+          { time: "15:30 - 16:45", type: "Workshop 3", title: "Vals", text: "In motion, with colgadas in chain." },
           { time: "20:00", type: "Grand Milonga", title: "Milonga with Yanina & Emmanuel show", text: "TDJ Mariko · UKR / ISR · until 01:00", milonga: true },
         ],
       },
@@ -242,15 +221,14 @@ const translations = {
         day: "Sunday",
         date: "October 25",
         items: [
-          { time: "13:00", type: "Workshop 4", title: "Enrosques and back sacadas", text: "Back sacada technique for both roles. Surprises included." },
-          { time: "14:30", type: "Workshop 5", title: "Volcada technique", text: "Linear and circular volcadas with ornaments." },
+          { time: "13:00 - 14:15", type: "Workshop 4", title: "Enrosques and back sacadas", text: "Back sacada technique for both roles. Surprises included." },
+          { time: "14:30 - 15:45", type: "Workshop 5", title: "Volcada technique", text: "Linear and circular volcadas with ornaments." },
           { time: "15:45", type: "Break", title: "Lunch break", text: "30 minutes to recharge." },
-          { time: "16:15", type: "Workshop 6", title: "Moulinette, enrosques and gancho", text: "Take your power and dynamics to the next level." },
+          { time: "16:15 - 17:30", type: "Workshop 6", title: "Moulinette, enrosques and gancho", text: "Take your power and dynamics to the next level." },
         ],
       },
     ],
     pricing: [
-      { period: "Until August 31", text: "For early birds who plan everything well in advance.", full: "160 €", single: "30 €" },
       { period: "Until September 30", text: "For dancers who know their plans a little closer to the date.", full: "190 €", single: "35 €" },
       { period: "From October 1", text: "For spontaneous last-minute birds — if places remain.", full: "220 €", single: "40 €" },
     ],
@@ -358,15 +336,37 @@ document.querySelectorAll("[data-lang]").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
-const milongaLink = document.querySelector("#milonga-form-link");
-if (MILONGA_FORM_URL) {
-  milongaLink.href = MILONGA_FORM_URL;
-  milongaLink.target = "_blank";
-  milongaLink.rel = "noreferrer";
-  milongaLink.classList.remove("disabled-link");
-  milongaLink.removeAttribute("aria-disabled");
+document.querySelectorAll("[data-registration-form]").forEach((link) => {
+  if (REGISTRATION_FORM_URL) {
+    link.href = REGISTRATION_FORM_URL;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.classList.remove("disabled-link");
+    link.removeAttribute("aria-disabled");
+  } else {
+    link.addEventListener("click", (event) => event.preventDefault());
+  }
+});
+
+const backToTopLink = document.querySelector("#back-to-top");
+const topMarker = document.querySelector("#top");
+
+function setBackToTopVisibility(isVisible) {
+  backToTopLink.classList.toggle("is-visible", isVisible);
+  backToTopLink.setAttribute("aria-hidden", String(!isVisible));
+  backToTopLink.tabIndex = isVisible ? 0 : -1;
+}
+
+if ("IntersectionObserver" in window) {
+  const topObserver = new IntersectionObserver(([entry]) => {
+    setBackToTopVisibility(!entry.isIntersecting);
+  });
+
+  topObserver.observe(topMarker);
 } else {
-  milongaLink.addEventListener("click", (event) => event.preventDefault());
+  const updateBackToTopVisibility = () => setBackToTopVisibility(window.scrollY > 88);
+  window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+  updateBackToTopVisibility();
 }
 
 setLanguage(getInitialLanguage());
