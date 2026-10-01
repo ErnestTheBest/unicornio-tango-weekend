@@ -106,26 +106,21 @@ function renderEventJsonLd(lang, content, canonicalUrl) {
       { "@type": "Person", name: "Yanina Muzyka" },
       { "@type": "Person", name: "Emmanuel Casal" },
     ],
-    offers: [
-      {
+    offers: content.pricing.flatMap((price) =>
+      [
+        { name: content.fullPass, price: price.full },
+        { name: content.singleClass, price: price.single },
+      ].map((offer) => ({
         "@type": "Offer",
-        name: content.fullPass,
-        price: "220",
+        name: `${offer.name} — ${price.period}`,
+        price: offer.price.replace(/[^\d.,]/g, "").replace(",", "."),
         priceCurrency: "EUR",
         availability: "https://schema.org/InStock",
-        validFrom: "2026-10-01T00:00:00+03:00",
+        ...(price.validFrom ? { validFrom: price.validFrom } : {}),
+        ...(price.validThrough ? { validThrough: price.validThrough } : {}),
         url: registrationUrl,
-      },
-      {
-        "@type": "Offer",
-        name: content.singleClass,
-        price: "40",
-        priceCurrency: "EUR",
-        availability: "https://schema.org/InStock",
-        validFrom: "2026-10-01T00:00:00+03:00",
-        url: registrationUrl,
-      },
-    ],
+      })),
+    ),
     sameAs: "https://facebook.com/events/s/unicornio-tango-weekend/2858745324495593/",
   };
 
@@ -136,7 +131,6 @@ function renderPage(lang, { rootCopy = false } = {}) {
   const content = translations[lang];
   const meta = pageMeta[lang];
   const canonicalUrl = `${siteUrl}/${lang}/`;
-  const currentPrice = content.pricing[0];
 
   const html = `<!doctype html>
 <html lang="${lang}">
@@ -256,13 +250,17 @@ ${renderEventJsonLd(lang, content, canonicalUrl)}
             </div>
             <p class="notice">${escapeHtml(content.pricesNotice)}</p>
           </div>
-          <div class="pricing-grid pricing-grid-single">
-            <article class="price-card">
-              <span class="price-period">${escapeHtml(currentPrice.period)}</span>
-              <p>${escapeHtml(currentPrice.text)}</p>
-              <div class="price-row"><span>${escapeHtml(content.fullPass)}</span><strong>${escapeHtml(currentPrice.full)}</strong></div>
-              <div class="price-row"><span>${escapeHtml(content.singleClass)}</span><strong>${escapeHtml(currentPrice.single)}</strong></div>
-            </article>
+          <div class="pricing-grid">
+            ${content.pricing
+              .map(
+                (price) => `<article class="price-card">
+              <span class="price-period">${escapeHtml(price.period)}</span>
+              <p>${escapeHtml(price.text)}</p>
+              <div class="price-row"><span>${escapeHtml(content.fullPass)}</span><strong>${escapeHtml(price.full)}</strong></div>
+              <div class="price-row"><span>${escapeHtml(content.singleClass)}</span><strong>${escapeHtml(price.single)}</strong></div>
+            </article>`,
+              )
+              .join("\n            ")}
           </div>
         </div>
       </section>

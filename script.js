@@ -90,7 +90,8 @@ const translations = {
       },
     ],
     pricing: [
-      { period: "No 1. oktobra", text: "Tiem, kuri izlemj pēdējā brīdī — ja vēl būs brīvas vietas.", full: "220 €", single: "40 €" },
+      { period: "Līdz 19. oktobrim", text: "Atlaides cena, reģistrējoties līdz 19. oktobrim ieskaitot.", full: "190 €", single: "35 €", validThrough: "2026-10-19T23:59:59+03:00" },
+      { period: "No 20. oktobra", text: "Pilna cena — ja vēl būs brīvas vietas.", full: "220 €", single: "40 €", validFrom: "2026-10-20T00:00:00+03:00" },
     ],
     achievements: [
       "2021. gada pasaules čempioni skatuves tango kategorijā",
@@ -187,7 +188,8 @@ const translations = {
       },
     ],
     pricing: [
-      { period: "С 1 октября", text: "Для тех, кто решится в последний момент — если останутся места.", full: "220 €", single: "40 €" },
+      { period: "До 19 октября", text: "Цена со скидкой при регистрации до 19 октября включительно.", full: "190 €", single: "35 €", validThrough: "2026-10-19T23:59:59+03:00" },
+      { period: "С 20 октября", text: "Полная стоимость — при наличии свободных мест.", full: "220 €", single: "40 €", validFrom: "2026-10-20T00:00:00+03:00" },
     ],
     achievements: [
       "Чемпионы мира по сценическому танго, 2021",
@@ -284,7 +286,8 @@ const translations = {
       },
     ],
     pricing: [
-      { period: "From October 1", text: "For those who decide at the last minute — subject to availability.", full: "220 €", single: "40 €" },
+      { period: "Until October 19", text: "Discounted price when registering by October 19, inclusive.", full: "190 €", single: "35 €", validThrough: "2026-10-19T23:59:59+03:00" },
+      { period: "From October 20", text: "Full price — subject to availability.", full: "220 €", single: "40 €", validFrom: "2026-10-20T00:00:00+03:00" },
     ],
     achievements: [
       "World Stage Tango Champions, 2021",
