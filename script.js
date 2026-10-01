@@ -90,7 +90,6 @@ const translations = {
       },
     ],
     pricing: [
-      { period: "Līdz 30. septembrim", text: "Tiem, kuri plāno dalību tuvāk pasākuma datumam.", full: "190 €", single: "35 €" },
       { period: "No 1. oktobra", text: "Tiem, kuri izlemj pēdējā brīdī — ja vēl būs brīvas vietas.", full: "220 €", single: "40 €" },
     ],
     achievements: [
@@ -188,7 +187,6 @@ const translations = {
       },
     ],
     pricing: [
-      { period: "До 30 сентября", text: "Для тех, кто определится с планами ближе к событию.", full: "190 €", single: "35 €" },
       { period: "С 1 октября", text: "Для тех, кто решится в последний момент — если останутся места.", full: "220 €", single: "40 €" },
     ],
     achievements: [
@@ -286,7 +284,6 @@ const translations = {
       },
     ],
     pricing: [
-      { period: "Until September 30", text: "For dancers who make their plans closer to the event.", full: "190 €", single: "35 €" },
       { period: "From October 1", text: "For those who decide at the last minute — subject to availability.", full: "220 €", single: "40 €" },
     ],
     achievements: [
