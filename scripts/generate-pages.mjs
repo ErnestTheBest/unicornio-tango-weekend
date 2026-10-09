@@ -3,6 +3,7 @@ import vm from "node:vm";
 
 const projectRoot = new URL("../", import.meta.url);
 const source = readFileSync(new URL("../script.js", import.meta.url), "utf8");
+const scrollUnicornSvg = readFileSync(new URL("assets/unicorn-runner.svg", projectRoot), "utf8").trim();
 const translationsStart = source.indexOf("const translations = ") + "const translations = ".length;
 const translationsEnd = source.indexOf("function renderSchedule");
 
@@ -369,6 +370,12 @@ ${renderEventJsonLd(lang, content, canonicalUrl)}
     </footer>
 
     <a class="back-to-top" id="back-to-top" href="#top" aria-hidden="true" tabindex="-1">${escapeHtml(content.backToTop)}</a>
+    <div class="scroll-unicorn" aria-hidden="true">
+      <div class="scroll-unicorn-racer">
+        <span class="unicorn-trail"></span>
+        ${scrollUnicornSvg}
+      </div>
+    </div>
   </body>
 </html>
 `;
