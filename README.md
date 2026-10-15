@@ -46,3 +46,5 @@ node scripts/generate-pages.mjs
 ```
 
 The generated pages are committed to the repository and served directly by GitHub Pages. `runtime.js` controls the back-to-top button and a decorative unicorn that runs right when scrolling down and turns to run left when scrolling up. The animation stops when scrolling stops and is disabled with the system's reduced-motion setting. Its SVG is stored in `assets/unicorn-runner.svg` and included in all language pages by the generator.
+
+The venue name, street address and map links are configured in `scripts/generate-pages.mjs`. Venue labels and city/country translations are in `script.js`; the venue photograph is `assets/padejosim-venue.webp`. The photo and embedded Google map load lazily.

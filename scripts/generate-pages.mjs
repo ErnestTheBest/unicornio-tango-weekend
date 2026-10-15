@@ -21,6 +21,14 @@ const registrationUrl = source.match(/const REGISTRATION_FORM_URL = "([^"]+)";/)
 if (!registrationUrl) throw new Error("Registration URL is missing");
 
 const siteUrl = "https://tangounicornio.lv";
+const venue = {
+  name: "Padejosim?",
+  streetAddress: "Brīvības gatve 401c",
+  addressLocality: "Rīga",
+  addressCountry: "LV",
+};
+const venueMapQuery = encodeURIComponent(`${venue.name}, ${venue.streetAddress}, ${venue.addressLocality}, Latvia`);
+const venueMapUrl = `https://www.google.com/maps/search/?api=1&query=${venueMapQuery}`;
 const pageMeta = {
   lv: {
     title: "Argentīnas tango nedēļas nogale Rīgā 2026 | Unicornio",
@@ -97,10 +105,13 @@ function renderEventJsonLd(lang, content, canonicalUrl) {
     image: [`${siteUrl}/assets/unicornio-cover-1733.webp`],
     location: {
       "@type": "Place",
+      name: venue.name,
+      hasMap: venueMapUrl,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Riga",
-        addressCountry: "LV",
+        streetAddress: venue.streetAddress,
+        addressLocality: venue.addressLocality,
+        addressCountry: venue.addressCountry,
       },
     },
     performer: [
@@ -169,6 +180,7 @@ ${renderEventJsonLd(lang, content, canonicalUrl)}
       <nav class="main-nav" aria-label="${escapeHtml(content.navLabel)}">
         <a href="#program">${escapeHtml(content.navProgram)}</a>
         <a href="#artists">${escapeHtml(content.navArtists)}</a>
+        <a href="#venue">${escapeHtml(content.navVenue)}</a>
         <a href="#registration">${escapeHtml(content.navRegistration)}</a>
       </nav>
 
@@ -211,6 +223,7 @@ ${renderEventJsonLd(lang, content, canonicalUrl)}
           <div class="hero-actions">
             <a class="button button-primary" href="#program">${escapeHtml(content.seeProgram)}</a>
             <a class="button button-ghost" href="#registration">${escapeHtml(content.register)}</a>
+            <a class="button button-ghost" href="#venue">${escapeHtml(content.venueTitle)}</a>
           </div>
         </div>
 
@@ -335,6 +348,29 @@ ${renderEventJsonLd(lang, content, canonicalUrl)}
                 </div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section venue-section" id="venue" aria-labelledby="venue-title">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">${escapeHtml(content.venueEyebrow)}</p>
+            <h2 id="venue-title">${escapeHtml(content.venueTitle)}</h2>
+          </div>
+
+          <div class="venue-grid">
+            <article class="venue-card">
+              <img class="venue-photo" src="/assets/padejosim-venue.webp" width="680" height="453" loading="lazy" decoding="async" alt="${escapeHtml(content.venueImageAlt)}" />
+              <div class="venue-details">
+                <h3>${escapeHtml(venue.name)}</h3>
+                <p class="venue-address">${escapeHtml(venue.streetAddress)}<br />${escapeHtml(content.venueCityCountry)}</p>
+                <a class="text-link" href="${escapeHtml(venueMapUrl)}" target="_blank" rel="noreferrer">${escapeHtml(content.venueMapLink)} <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <div class="venue-map">
+              <iframe src="https://www.google.com/maps?q=${venueMapQuery}&amp;z=16&amp;output=embed&amp;hl=${lang}" width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${escapeHtml(content.venueMapTitle)}" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </section>
